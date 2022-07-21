@@ -1,0 +1,8 @@
+[paths]
+
+ratio_pic: ./images/ratio.png
+
+n_back: ./data/n_back.npy
+n_lost: ./data/n_lost.npy
+n_through: ./data/n_through.npy
+depth: ./data/depth.npy
