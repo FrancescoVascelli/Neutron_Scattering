@@ -26,17 +26,28 @@ destination1 = configu.get('paths','ratio_pic')
 
 
 def graph_plot():
-    y0 = np.load(source0)
-    y1 = np.load(source1)
-    y2 = np.load(source2)
-    x = np.load(source3)
     
-    f = plt.figure(figsize=(18, 18))
-    plt.scatter(x,y0)
-    plt.scatter(x,y1)
-    plt.scatter(x,y2)
 
-    f.savefig(destination1)
+    n_back = np.load(source0)
+    n_lost = np.load(source1)
+    n_through = np.load(source2)
+    x_depth = np.load(source3)
     
+    f = plt.figure(figsize=(15, 15))
+    
+    plt.scatter(x_depth,n_back)
+    plt.scatter(x_depth,n_lost)
+    plt.scatter(x_depth,n_through)
+    
+    
+    plt.xlabel("Depth (arbitrary units)", fontsize=20)
+    plt.ylabel("Ratio of particles", fontsize=20)
+    plt.xticks(fontsize=20)
+    plt.yticks(np.arange(0.0, 1.0, 0.1), fontsize=20)
+    plt.ylim(-0.05,1)
+    plt.legend(['n_back','n_lost','n_through'], loc="upper left", fontsize= 20)
+    
+    f.savefig(destination1)
+    plt.show()    
     
 graph_plot()

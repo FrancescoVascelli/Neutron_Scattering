@@ -19,53 +19,44 @@ config.read(sys.argv[1])
 
 os.makedirs('./data',exist_ok=True)
 os.makedirs('./images',exist_ok=True)
+
 destination0 = config.get('paths','n_back')
 destination1 = config.get('paths','n_lost')
 destination2 = config.get('paths','n_through')
 destination3 = config.get('paths','depth')
 
-#initial conditions 
-old_x=0
-old_y=0
 
-new_x=1 
-new_y=0
-
-xy_vector = [old_x,old_y,new_x,new_y]
+n_particles = int(config.get('input','n_particles'))
+steps = int(config.get('input','steps'))
 
 
-n_particles=1000
-
-n_back=0
-n_lost=0
-n_through=0
-
-n_end = [n_back,n_lost,n_through]
+n_end = [0,0,0]
 
 
-steps=100
+x_depth=[]
+n_back=[]
+n_lost=[]
+n_through=[]
 
-x=[]
-y0=[]
-y1=[]
-y2=[]
+
+
+
 for depth in range(2,80):
     for j in range(n_particles):   
-        xy_vector = [0,0,1,0]
-        scattering.random_walk(xy_vector, n_end, depth, steps)
-    x.append(depth)
-    y0.append(n_end[0]/n_particles)
-    y1.append(n_end[1]/n_particles)
-    y2.append(n_end[2]/n_particles)
+        scattering.random_walk(n_end, depth, steps)
+    x_depth.append(depth)
+    n_back.append(n_end[0]/n_particles)
+    n_lost.append(n_end[1]/n_particles)
+    n_through.append(n_end[2]/n_particles)
     n_end = [0,0,0]
     
 
     
-np.save(destination0,y0)
-np.save(destination1,y1)
-np.save(destination2,y2)
+np.save(destination0,n_back)
+np.save(destination1,n_lost)
+np.save(destination2,n_through)
 
-np.save(destination3,x)
+np.save(destination3,x_depth)
     
 
 

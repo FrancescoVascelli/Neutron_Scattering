@@ -8,7 +8,8 @@ Created on Tue Jul  5 15:58:08 2022
 import numpy 
 from numpy import random
 
-def random_walk(xy_vector, n_end, depth, steps):
+def random_walk(n_end, depth, steps):
+    xy_vector = [0,0,1,0]
     for i in range(steps):
         p = random.rand()
     
