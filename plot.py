@@ -9,7 +9,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import sys
-from sys import argv
 import configparser
 
 configu = configparser.ConfigParser()
@@ -45,7 +44,7 @@ def graph_plot():
     plt.xticks(fontsize=20)
     plt.yticks(np.arange(0.0, 1.0, 0.1), fontsize=20)
     plt.ylim(-0.05,1)
-    plt.legend(['n_back','n_lost','n_through'], loc="upper left", fontsize= 20)
+    plt.legend(['back','lost','through'], loc="upper left", fontsize= 20)
     
     f.savefig(destination1)
     plt.show()    
