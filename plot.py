@@ -26,6 +26,9 @@ destination1 = configu.get('paths','ratio_pic')
 
 def graph_plot():
     
+    """This method plots the ratio of neutrons by destination 
+    as a function of the depth of the reactor wall.
+    """    
 
     n_back = np.load(source0)
     n_lost = np.load(source1)
@@ -40,13 +43,12 @@ def graph_plot():
     
     
     plt.xlabel("Depth (arbitrary units)", fontsize=25)
-    plt.ylabel("Ratio of particles", fontsize=25)
+    plt.ylabel("Ratio of neutrons", fontsize=25)
     plt.xticks(fontsize=20)
     plt.yticks(np.arange(0.0, 1.0, 0.1), fontsize=20)
     plt.ylim(-0.05,1)
     plt.legend(['back','lost','through'], loc="upper right", fontsize= 20)
     
-    f.savefig(destination1)
-    plt.show()    
+    f.savefig(destination1)    
     
 graph_plot()
