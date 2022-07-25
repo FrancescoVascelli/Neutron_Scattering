@@ -20,6 +20,18 @@ def test_random_walk(depth, steps):
     scattering.random_walk(n_end, depth, steps)
    
     assert sum(n_end) == 1
+
+
+def test_turn_right():
+    xy_vector = [0,0,1,0]
+    scattering.turn_right(xy_vector)
+    assert xy_vector == [1,0,1,-1]
+
+def test_turn_left():
+     xy_vector = [0,0,1,0]
+def test_go_forward():
+     xy_vector = [0,0,1,0]
+
     
 
 if __name__ == "main":
