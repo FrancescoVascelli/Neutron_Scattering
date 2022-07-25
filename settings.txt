@@ -1,6 +1,6 @@
 [input]
 
-n_particles = 1000
+n_particles = 10000
 steps = 100
 
 
