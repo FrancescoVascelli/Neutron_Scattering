@@ -28,9 +28,14 @@ def test_turn_right():
     assert xy_vector == [1,0,1,-1]
 
 def test_turn_left():
-     xy_vector = [0,0,1,0]
+    xy_vector = [0,0,1,0]
+    scattering.turn_left(xy_vector)
+    assert xy_vector == [1,0,1,1]
+    
 def test_go_forward():
-     xy_vector = [0,0,1,0]
+    xy_vector = [0,0,1,0]
+    scattering.go_forward(xy_vector)
+    assert xy_vector == [1,0,2,0]
 
     
 
