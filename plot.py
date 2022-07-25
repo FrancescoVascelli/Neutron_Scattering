@@ -35,7 +35,7 @@ def graph_plot():
     n_through = np.load(source2)
     x_depth = np.load(source3)
     
-    f = plt.figure(figsize=(15, 15))
+    f = plt.figure(figsize=(10, 10))
     
     plt.scatter(x_depth,n_back)
     plt.scatter(x_depth,n_lost)
