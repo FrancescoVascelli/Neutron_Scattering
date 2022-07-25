@@ -5,7 +5,6 @@ Created on Tue Jul  5 15:58:08 2022
 @author: Francesco Vascelli
 """
 
-import numpy 
 from numpy import random
 
 def random_walk(n_end, depth, steps):
