@@ -39,8 +39,8 @@ def graph_plot():
     plt.scatter(x_depth,n_through)
     
     
-    plt.xlabel("Depth (arbitrary units)", fontsize=20)
-    plt.ylabel("Ratio of particles", fontsize=20)
+    plt.xlabel("Depth (arbitrary units)", fontsize=25)
+    plt.ylabel("Ratio of particles", fontsize=25)
     plt.xticks(fontsize=20)
     plt.yticks(np.arange(0.0, 1.0, 0.1), fontsize=20)
     plt.ylim(-0.05,1)
