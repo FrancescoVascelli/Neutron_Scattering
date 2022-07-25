@@ -36,16 +36,16 @@ def turn_left(xy_vector):
         xy_vector[0] += 1
         xy_vector[3] += 1
         
-    if xy_vector[2]-xy_vector[0]==-1: #-x direction
+    elif xy_vector[2]-xy_vector[0]==-1: #-x direction
         
         xy_vector[2] += 1
         xy_vector[3] -= 1
         
-    if xy_vector[3]-xy_vector[1]==1: #+y direction
+    elif xy_vector[3]-xy_vector[1]==1: #+y direction
         xy_vector[1] += 1
         xy_vector[2] -= 1
         
-    if xy_vector[3]-xy_vector[1]==-1: #-y direction
+    elif xy_vector[3]-xy_vector[1]==-1: #-y direction
         
         xy_vector[2] += 1
         xy_vector[3] += 1   
@@ -57,16 +57,16 @@ def turn_right(xy_vector):
         xy_vector[0] += 1
         xy_vector[3] -= 1
         
-    if xy_vector[2]-xy_vector[0]==-1: #-x direction
+    elif xy_vector[2]-xy_vector[0]==-1: #-x direction
         
         xy_vector[2] += 1
         xy_vector[3] += 1
         
-    if xy_vector[3]-xy_vector[1]==1: #+y direction
+    elif xy_vector[3]-xy_vector[1]==1: #+y direction
         xy_vector[1] += 1
         xy_vector[2] += 1
         
-    if xy_vector[3]-xy_vector[1]==-1: #-y direction
+    elif xy_vector[3]-xy_vector[1]==-1: #-y direction
         
         xy_vector[2] -= 1
         xy_vector[3] += 1   
@@ -78,17 +78,17 @@ def go_forward(xy_vector):
         xy_vector[0] += 1
         xy_vector[2] += 1
         
-    if xy_vector[2]-xy_vector[0]==-1: #-x direction
+    elif xy_vector[2]-xy_vector[0]==-1: #-x direction
         
         xy_vector[0] -= 1
         xy_vector[2] -= 1
         
-    if xy_vector[3]-xy_vector[1]==1: #+y direction
+    elif xy_vector[3]-xy_vector[1]==1: #+y direction
         
         xy_vector[1] += 1 
         xy_vector[3] += 1
         
-    if xy_vector[3]-xy_vector[1]==-1: #-y direction
+    elif xy_vector[3]-xy_vector[1]==-1: #-y direction
         
         xy_vector[1] -= 1
         xy_vector[3] -= 1
