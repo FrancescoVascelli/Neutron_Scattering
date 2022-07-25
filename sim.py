@@ -7,12 +7,11 @@ Created on Mon Jul  4 10:28:34 2022
 
 import scattering
 import numpy as np
-from numpy import random
+
 import configparser
 
 import os
 import sys
-from sys import argv
 
 config = configparser.ConfigParser()
 config.read(sys.argv[1])
