@@ -54,7 +54,7 @@ In addition, there are the local paths to load the array data and to save the fi
 the probability of each final state. Furthermode, this calculation is done for different depths of the reactor wall in a defined range and the results are all saved for plotting.
 - In [plot.py](/plot.py) there is a function that plots the probability of the final states as a function of the depth, loading the data from the saved arrays using configparser.
 
-To give an example result, belowe there is a plot of the probability as a function of depth, using the default configuration.
+To give an example result, below there is a plot of the probability as a function of depth, using the default configuration.
 
 ![](/images/ratio.png)
 
