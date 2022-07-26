@@ -43,7 +43,7 @@ def graph_plot():
     
     
     plt.xlabel("Depth (arbitrary units)", fontsize=25)
-    plt.ylabel("Ratio of neutrons", fontsize=25)
+    plt.ylabel("Probability of final state", fontsize=25)
     plt.xticks(fontsize=20)
     plt.yticks(np.arange(0.0, 1.0, 0.1), fontsize=20)
     plt.ylim(-0.05,1)
