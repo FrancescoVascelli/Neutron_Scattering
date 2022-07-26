@@ -10,6 +10,10 @@ import numpy as np
 
 import configparser
 
+import tqdm
+from tqdm import trange
+import time
+
 import os
 import sys
 
@@ -40,7 +44,7 @@ n_through=[]
 
 
 
-for depth in range(2,80):
+for depth in trange(2,80):
     for j in range(n_particles):   
         scattering.random_walk(n_end, depth, steps)
     x_depth.append(depth)
@@ -48,7 +52,7 @@ for depth in range(2,80):
     n_lost.append(n_end[1]/n_particles)
     n_through.append(n_end[2]/n_particles)
     n_end = [0,0,0]
-    
+    time.sleep(0.1)
 
     
 np.save(destination0,n_back)
