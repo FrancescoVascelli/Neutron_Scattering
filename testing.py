@@ -6,6 +6,7 @@ Created on Sun Jul 24 14:23:59 2022
 """
 
 import scattering
+import hypothesis
 from hypothesis import strategies as st
 from hypothesis import settings
 from hypothesis import given
