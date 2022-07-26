@@ -1,7 +1,5 @@
 # Neutron Scattering
- 
- stuff
- 
+
 ## Random walk simulation of neutron scattering
 
 The following code simulates the scattering of multiple neutrons inside a reactor wall using a 2D random walk. The main steps are:
