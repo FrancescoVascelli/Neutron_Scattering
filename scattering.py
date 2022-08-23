@@ -50,7 +50,7 @@ class RandomWalkResult:
         self.arr_lost = arr_lost
         self.arr_through = arr_through
 
-random_walk_result: RandomWalkResult = RandomWalkResult(arr_depth=[0],arr_back=[0],arr_lost=[0],arr_through=[0])
+random_walk_result: RandomWalkResult = RandomWalkResult(arr_depth=[],arr_back=[],arr_lost=[],arr_through=[])
 
 def compute_random_walk(n_particles: int, depth: int, steps: int):
     """
