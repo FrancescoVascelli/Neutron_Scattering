@@ -1,0 +1,7 @@
+numpy
+configparser
+rich
+matplotlib
+hypothesis
+psutil
+plotext
