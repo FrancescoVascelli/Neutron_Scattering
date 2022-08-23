@@ -28,6 +28,11 @@ Each step is considered as the mean free path between interactions.
 In the same way, the reactor wall depth is expressed in units of steps.
 
 
+## How it's work
+
+- The random walk is performed for each neutron and the data resulting from the scattering file are used to calculate
+the probability of each final state. Furthermode, this calculation is done for different depths of the reactor wall in a defined range and the results are all saved for plotting.
+
 ## How to run the simulation
 
 In order to run the code and plot the results, the user must:
@@ -43,14 +48,21 @@ The libraries used in this code are the standard one (cames with python) + modul
 ## Project structure
 
 The code is separated in different files:
-- In [scattering.py](/scattering.py) there are all the custom functions necessary for the 2D random walk.
+
+- In [init.py](/init.py) there are all function to init the program such as handling all params specified by the user and print them to the user
+
+- In [utility.py](/utility.py) there are common function used all arround in the program (i.e: save data, graph plot, handling messages for user ...) 
+ 
+- In [scattering.py](/scattering.py) there are all the custom functions necessary for the 2D random walk and the main calc function.
  After the neutron ends its walk, the function saves its final position in an array for data analysis.
-- In [testing.py](/testing.py) there are a few tests for all the functions of the random walk, with hypothesis testing.
-- In [sim.py](/sim.py) there is the main part of the code. The random walk is performed for each neutron and the data resulting from the scattering file are used to calculate
-the probability of each final state. Furthermode, this calculation is done for different depths of the reactor wall in a defined range and the results are all saved for plotting.
 
+- In [testing.py](/testing.py) there are a few tests for all the functions of the random walk, with hypothesis testing and one function to execute all test function as a test suite.
 
-To give an example result, below there is a plot of the probability as a function of depth, using the default configuration.
+- In [sim.py](/sim.py) there is the main function of the program (entrypoint). 
+
+## Example of output graph
+
+Below there is a plot of the probability as a function of depth, using the default configuration.
 
 ![](/images/ratio.png)
 
